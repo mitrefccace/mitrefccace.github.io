@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+.glyphicon.glyphicon-refresh {
+    font-size: 100px;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@media screen and (min-width: 768px) {
+	.modal-dialog {
+	  width: 700px; /* New width for default modal */
+	}
+	.modal-sm {
+	  width: 350px; /* New width for small modal */
+	}
+}
+@media screen and (min-width: 992px) {
+	.modal-lg {
+	  width: 950px; /* New width for large modal */
+	}
+}
+</style>
+
+<title>Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+<div class="modal-dialog modal-sm">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h2 class="modal-title">Incoming call...</h2>
+</div>
+<div class="modal-body text-center">
+<span class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+</div>
+<div class="modal-footer">
+<button class="btn btn-success  center-block" name="answerbutton" id="answerbutton" class="btn btn-success" data-dismiss="modal">
+<span class="glyphicon glyphicon-earphone" style="vertical-align:middle"></span>&nbsp;&nbsp;&nbsp;Answer
+</button>
+
+</div>
+</div>
+</div>
+</div>
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<button name="myButton" id="myButton" type="button" class="btn btn-primary">Call</button>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#myButton").click(function(){
+        $("#myModal").modal('show');
+    });
+    $("#answerbutton").click(function(){
+        ; 
+    });
+});
+</script>
+
+
+</body>
+</html>
