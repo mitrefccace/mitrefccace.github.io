@@ -7,8 +7,9 @@
     -webkit-animation: spin 1000ms infinite linear;
     animation: spin 1000ms infinite linear;
 }
-.glyphicon.glyphicon-refresh {
+.glyphicon.glyphicon-phone-alt {
     font-size: 100px;
+	color: red;
 }
 @-webkit-keyframes spin {
     0% {
@@ -43,6 +44,13 @@
 	  width: 950px; /* New width for large modal */
 	}
 }
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
 </style>
 
 <title>Test</title>
@@ -63,7 +71,7 @@
 <h2 class="modal-title">Incoming call...</h2>
 </div>
 <div class="modal-body text-center">
-<span class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+<span class="glyphicon glyphicon-phone-alt blink"></span>
 </div>
 <div class="modal-footer">
 <button class="btn btn-success  center-block" name="answerbutton" id="answerbutton" class="btn btn-success" data-dismiss="modal">
